@@ -12,15 +12,16 @@ selectors.btnStart.addEventListener('click', hendlerChangeColorOn);
 selectors.btnStop.addEventListener('click', hendlerChangeColorOff);
 
 function hendlerChangeColorOn(evt) {
+
 selectors.btnStart.disabled = true;
-selectors.btnStop.disabled = false;
   
 id = setInterval(() => {
     selectors.body.style.background = getRandomHexColor()
 }, 1000)
 }
 
-function hendlerChangeColorOff() {
+function hendlerChangeColorOff(evt) {
+   selectors.btnStart.disabled = false;
    clearInterval(id);
 }
 
