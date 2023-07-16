@@ -19,5 +19,33 @@ img {
 
 
 .timer {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    flex-direction: row;
+    color:black;
+}
+
+.input {
+    width: 200px;
+    height: 32px;
+    border-radius: 7px;
+    background: rgba(174, 226, 237, 0.653);
+    border: none;
   
+    text-align: center;
+    color: black;
+    font-weight: 600;
+}
+
+.btn {
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    background: rgba(174, 226, 237, 0.653);
+    color: black;
+  
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
 }
