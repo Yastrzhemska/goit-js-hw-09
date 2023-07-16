@@ -28,10 +28,10 @@ function createPromise(position, delay) {
 function handleSubmit(evt) {
   evt.preventDefault();
   for (let i = 1; i <= Number(selectors.amount.value); i += 1) {
-  let position = i + 1;
+  // let position = i + 1;
   let delays = Number(selectors.delay.value) + Number(selectors.step.value) * i;
 
-  createPromise(position, delays)
+  createPromise(i, delays)
   .then(({ position, delay }) => {
     Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`)
   })
