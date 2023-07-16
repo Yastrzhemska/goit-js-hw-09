@@ -26,7 +26,8 @@ flatpickr(selectors.inputDate,  {
             Notiflix.Notify.failure('Please choose a date in the future');
             selectors.btnStart.disabled = true;
         } else {
-            // selectors.btnStart.disabled = false;
+            Notiflix.Notify.success('Great! Let`s start!');
+            selectors.btnStart.disabled = false;
         }
     }
 });
