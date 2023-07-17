@@ -49,3 +49,8 @@ img {
     border: none;
     border-radius: 4px;
 }
+
+button[disabled] {
+  color: whitesmoke;
+  cursor: no-drop;
+}
