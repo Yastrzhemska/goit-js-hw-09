@@ -15,7 +15,7 @@ const selectors = {
 
 let timerId = null;
 
-
+selectors.btnStart.disabled = true;
 flatpickr(selectors.inputDate,  {
     enableTime: true,
     time_24hr: true,
@@ -36,8 +36,9 @@ selectors.btnStart.addEventListener('click', hendlerStartTimer);
 
 
 
-    function hendlerStartTimer() {
-  timerId = setInterval(() => {
+function hendlerStartTimer() {
+        selectors.btnStart.disabled = true;
+        timerId = setInterval(() => {
     const choosenDate = new Date(selectors.inputDate.value);
     const timeToFinish = choosenDate - Date.now();
     const { days, hours, minutes, seconds } = convertMs(timeToFinish);
